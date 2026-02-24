@@ -1,0 +1,44 @@
+# Walkthrough: Uploading Sorting Algorithms to GitHub
+
+## What I Did
+
+I have prepared your local repository by copying and renaming the requested files:
+
+1.  **Copied Files**:
+    -   [insertionsor.cpp](file:///C:/Users/User/Downloads/gcu%204th%20sem/daa/insertionsor.cpp) -> [C:\Users\User\OneDrive\Documents\GitHub\gcu-work\insertionsort.cpp](file:///Users/User/OneDrive/Documents/GitHub/gcu-work/insertionsort.cpp)
+    -   [selections.cpp](file:///C:/Users/User/Downloads/gcu%204th%20sem/daa/selections.cpp) -> [C:\Users\User\OneDrive\Documents\GitHub\gcu-work\selectionsort.cpp](file:///Users/User/OneDrive/Documents/GitHub/gcu-work/selectionsort.cpp)
+    -   [mergesort.cpp](file:///C:/Users/User/Downloads/gcu%204th%20sem/daa/mergesort.cpp) -> [C:\Users\User\OneDrive\Documents\GitHub\gcu-work\mergesort.cpp](file:///Users/User/OneDrive/Documents/GitHub/gcu-work/mergesort.cpp)
+
+2.  **Committed Changes**:
+    -   I ran `git add .` to stage the new files.
+    -   I ran `git commit -m "Add sorting algorithms"` to save these changes to your local git history.
+
+## How to Push to GitHub ("Copy to Web")
+
+Since the automated push failed due to authentication (403 Forbidden), you need to manually push the changes. You can do this using **VS Code**, **Terminal**, or **GitHub Desktop**.
+
+### Option 1: Using VS Code (Recommended)
+1.  Open the folder **`C:\Users\User\OneDrive\Documents\GitHub\gcu-work`** in VS Code.
+2.  Click on the **Source Control** icon (looks like a branch) in the left sidebar.
+3.  You should see a button that says **Sync Changes** or **Push**. Click it.
+4.  If asked to sign in to GitHub, follow the prompts.
+
+### Option 2: Using GitHub Desktop
+1.  Open **GitHub Desktop**.
+2.  Go to **File** > **Add Local Repository...**.
+3.  Browse to `C:\Users\User\OneDrive\Documents\GitHub\gcu-work` and click **Add Repository**.
+4.  You will see a button in the top right that says **Push origin** (with a `1` next to it). Click it.
+
+### Option 3: Using Terminal
+1.  Open your terminal/command prompt.
+2.  Navigate to the repository:
+    ```powershell
+    cd "C:\Users\User\OneDrive\Documents\GitHub\gcu-work"
+    ```
+3.  Run the push command:
+    ```powershell
+    git push
+    ```
+4.  If prompted for a username/password:
+    -   **Username**: Your GitHub username (`abuzar200`).
+    -   **Password**: This must be a **Personal Access Token**, not your account password. (If you don't have one, use Option 1 or 2).

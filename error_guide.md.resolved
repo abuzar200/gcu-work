@@ -1,0 +1,32 @@
+# Fixing the 'WinMain' Error in C++
+
+The error `undefined reference to WinMain` occurs when the C++ compiler tries to build an executable but **cannot find the [main()](file:///c:/Users/User/Downloads/gcu%204th%20sem/daa/selections.cpp#4-33) function**.
+
+## Why did this happen?
+1. **Empty File:** You tried to compile [insertionsor.cpp](file:///c:/Users/User/Downloads/gcu%204th%20sem/daa/insertionsor.cpp), but the file was empty (0 bytes).
+2. **Not Saved:** You wrote code in your editor but didn't press **Ctrl + S** before running the `g++` command.
+3. **Typos:** You had a typo in the filename while compiling (e.g., `insetionsor.cpp` instead of [insertionsor.cpp](file:///c:/Users/User/Downloads/gcu%204th%20sem/daa/insertionsor.cpp)).
+
+## How to solve it permanently:
+
+### 1. Enable Auto-Save (The Best Way)
+In VS Code or most editors, you can enable **Auto Save**. This ensures that whenever you switch to the terminal, your code is already saved.
+- Go to **File > Auto Save** (Check it on).
+
+### 2. Check File Content Before Compiling
+In your terminal, run this to see if your file actually has content:
+```powershell
+ls *.cpp
+```
+Look at the **Length** column. If it says `0`, the file is empty and will fail.
+
+### 3. Use a "Safe Compile" Script
+Instead of just `g++`, you can run this command which checks if the file exists and is not empty before compiling:
+```powershell
+if ((Get-Item insertionsor.cpp).Length -gt 0) { g++ insertionsor.cpp -o insert } else { echo "Error: File is empty! Save it first." }
+```
+
+## If it happens again:
+1. **Check your editor:** Did you save the file? (**Ctrl + S**)
+2. **Check your spelling:** Does the filename in your command match the actual file exactly?
+3. **Check the code:** Does the file actually have a `int main() { ... }` block?
